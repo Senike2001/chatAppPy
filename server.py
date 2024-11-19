@@ -21,8 +21,7 @@ async def handle_client(reader, writer):
         writer.close()
         await writer.wait_closed()
         return
-    # ma midification 
-    
+
     # Ajouter le client à la liste des clients connectés
     clients[client_id] = (reader, writer)
     writer.write("Vous êtes connecté au serveur !\n".encode("utf-8"))
